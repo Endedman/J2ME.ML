@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<atom:link href="http://j2me.ml/rss.xml" rel="self" type="application/rss+xml" />
+<title><![CDATA[All for Java gamers]]></title>
+<link><![CDATA[http://j2me.ml/]]></link>
+<description><![CDATA[J2ME.ML]]></description>
+
+<image>
+<url><![CDATA[http://web-master.pp.ru/pic/rss.jpg]]></url>
+<link><![CDATA[http://j2me.ml]]></link>
+<title><![CDATA[RSS-канал]]></title>
+</image>
+
+<lastBuildDate>Tue, 30 Aug 2022 16:43:00 GMT</lastBuildDate>
+<item>
+<title><![CDATA[Gamer's section]]></title>
+<link><![CDATA[http://j2me.ml/games]]></link>
+<description><![CDATA[<img src="http://web-master.pp.ru/pic/rss.jpg" width="31" height="31" border="0"></a>If you tired from integrated 'Snake', try this! Click <a href="http://j2me.ml/games">this</a>]]></description>
+<pubDate><![CDATA[Tue, 30 Aug 2022 16:41:00 GMT]]></pubDate>
+<guid><![CDATA[http://j2me.ml]]></guid>
+</item>
+<item>
+<title><![CDATA[Our uploader is done!!]]></title>
+<link><![CDATA[http://j2me.ml/admin/upload/oldupload]]></link>
+<description><![CDATA[<img src="http://web-master.pp.ru/pic/rss.jpg" width="31" height="31" border="0"></a> I have created uploader which you can open even in old device!]]></description>
+<pubDate><![CDATA[Tue, 30 Aug 2022 16:29:00 GMT]]></pubDate>
+<guid><![CDATA[http://j2me.ml]]></guid>
+</item>
+<item>
+<title><![CDATA[first post on rss!]]></title>
+<link><![CDATA[http://j2me.ml]]></link>
+<description><![CDATA[<img src="http://web-master.pp.ru/pic/rss.jpg" width="31" height="31" border="0"></a> The SymWld collaborators gave me an idea to create RSS!]]></description>
+<pubDate><![CDATA[Tue, 30 Aug 2022 16:28:00 GMT]]></pubDate>
+<guid><![CDATA[http://j2me.ml]]></guid>
+</item>
+
+</channel> </rss>
