@@ -1,5 +1,5 @@
 <?php
-$wthr = file_get_contents('https://api.openweathermap.org/data/2.5/weather?lat=59.93428&lon=30.18&appid=7ae1fa5a576d279da31a474fdc41c036&units=metric');
+$wthr = file_get_contents('https://api.openweathermap.org/data/2.5/weather?lat=59.93428&lon=30.18&appid=APIKEY&units=metric');
 $decoded_wthr = json_decode($wthr, true);
 $main = $decoded_wthr['main'];
 $weather = $decoded_wthr['weather'];
