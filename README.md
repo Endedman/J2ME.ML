@@ -1,3 +1,3 @@
 # J2ME.ML
 Репозиторий с исходниками компонентов сайта.  
-![image] (https://raster.shields.io/badge/dependencies-none-red.png)
+<img src="https://raster.shields.io/badge/dependencies-none-red.png" alt="dependencies-none"/>
