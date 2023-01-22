@@ -1,3 +1,12 @@
+-- phpMyAdmin SQL Dump
+-- version 4.4.15.10
+-- https://www.phpmyadmin.net
+--
+-- Хост: localhost
+-- Время создания: Янв 22 2023 г., 10:03
+-- Версия сервера: 5.5.68-MariaDB
+-- Версия PHP: 5.4.16
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
@@ -31,24 +40,24 @@ CREATE TABLE IF NOT EXISTS `apps` (
   `paid` varchar(8) NOT NULL DEFAULT 'false',
   `fee` int(4) NOT NULL DEFAULT '0',
   `paytoken` varchar(64) NOT NULL DEFAULT 'endedman',
-  `payway` varchar(8) NOT NULL DEFAULT 'free'
+  `payway` varchar(8) NOT NULL DEFAULT 'free',
+  `section` text NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `apps`
 --
 
-INSERT INTO `apps` (`id`, `app_name`, `dev_name`, `votes`, `icon`, `banner`, `shorten_link`, `file`, `token`, `disabled`, `paid`, `fee`, `paytoken`, `payway`) VALUES
-(1, 'Opera Mini', 'Opera ASA', 1, '/app/opera-mini/logo-opera-mini.png', '/app/opera-mini/frontimage.jpg', '/app/opera-mini/', '/app/opera-mini/opera-mini.jar', '0', 'false', 'false', 0, 'endedman', 'free'),
-(2, 'MPGram', 'nnproject', 1, '/app/mpgram/logo-mpgram.png', '/app/mpgram/frontimage.jpg', '/app/mpgram/', '/app/mpgram/mpgram.jar', '0', 'true', 'false', 0, 'endedman', 'free'),
-(3, 'vk4me', 'crx.moe', 1, '/app/vk4me/logo-vk4me.png', '/app/vk4me/frontimage.jpg', '/app/vk4me/', '/app/vk4me/vk4me.jar', '0', 'false', 'false', 0, 'endedman', 'free'),
-(4, 'JTube', 'nnproject', 5, '/app/jtube/logo-jtube.png', '/app/opera-mini/frontimage.jpg', '/app/jtube', '/app/jtube/jtube.jar', '0', 'false', 'false', 0, 'endedman', 'free'),
-(5, 'Example', 'Endedman', 666, '/no-photo.jpg', 'https://via.placeholder.com/705x355/09f/fff.png', '', '/jars', '0', 'false', 'true', 20, 'endedman', 'free'),
-(6, 'mobap-game', 'vipaoL', 1, '/no-photo.jpg', '/app/mobap-game/frontimage.jpg', '/app/mobap-game', '/app/mobap-game/mobap-game.jar', '0', 'false', 'false', 0, 'endedman', 'free'),
-(7, 'Yandex Mail', 'Yandex', 1, '/app/yandexmail/logo-yandexmail.png', '/app/opera-mini/frontimage.jpg', '', '/app/yandexmail/yandexmail.jar', '0', 'false', 'false', 0, 'endedman', 'free'),
-(8, 'PvZ Java', 'PopCap Games', 1, '/no-photo.jpg', '/app/opera-mini/frontimage.jpg', '', '/app/plants-vs-zombies/plants-vs-zombies.jar', '0', 'false', 'false', 0, 'endedman', 'free'),
-(10, 'EnderServ', 'Endedman', 0, 'http://j2me.ml/no-photo.jpg', 'http://j2me.ml/no-photo.jpg', '', 'http://j2me.ml/app/EnderServ/EnderServ.jar', 'e63b9959cbf8e9dae15cfd09790dbdaa', 'false', 'false', 0, '', 'free'),
-(11, 'Example App', 'Endedman', 0, 'http://j2me.ml/no-photo.jpg', 'http://j2me.ml/no-photo.jpg', '', 'http://j2me.ml/app/Example App/Example App.jar', 'cfe496a34b36bcdd84785cba6a88e1ff', 'false', 'false', 0, '', 'free');
+INSERT INTO `apps` (`id`, `app_name`, `dev_name`, `votes`, `icon`, `banner`, `shorten_link`, `file`, `token`, `disabled`, `paid`, `fee`, `paytoken`, `payway`, `section`) VALUES
+(1, 'Opera Mini', 'Opera ASA', 1, '/app/opera-mini/logo-opera-mini.png', '/app/opera-mini/frontimage.jpg', '/app/opera-mini/', '/app/opera-mini/opera-mini.jar', '0', 'false', 'false', 0, 'endedman', 'free', 'communicate'),
+(2, 'MPGram', 'nnproject', 1, '/app/mpgram/logo-mpgram.png', '/app/mpgram/frontimage.jpg', '/app/mpgram/', '/app/mpgram/mpgram.jar', '0', 'true', 'false', 0, 'endedman', 'free', 'social'),
+(3, 'vk4me', 'crx.moe', 1, '/app/vk4me/logo-vk4me.png', '/app/vk4me/frontimage.jpg', '/app/vk4me/', '/app/vk4me/vk4me.jar', '0', 'false', 'false', 0, 'endedman', 'free', 'social'),
+(4, 'JTube', 'nnproject', 5, '/app/jtube/logo-jtube.png', '/app/opera-mini/frontimage.jpg', '/app/jtube', '/app/jtube/jtube.jar', '0', 'false', 'false', 0, 'endedman', 'free', 'social'),
+(5, 'Example paid app', 'Endedman', 666, '/no-photo.jpg', 'https://via.placeholder.com/705x355/09f/fff.png', '', '/jars', '0', 'false', 'true', 20, 'endedman', 'free', 'other'),
+(6, 'mobap-game', 'vipaoL', 1, '/no-photo.jpg', '/app/mobap-game/frontimage.jpg', '/app/mobap-game', '/app/mobap-game/mobap-game.jar', '0', 'false', 'false', 0, 'endedman', 'free', 'arcade'),
+(7, 'Yandex Mail', 'Yandex', 1, '/app/yandexmail/logo-yandexmail.png', '/app/opera-mini/frontimage.jpg', '', '/app/yandexmail/yandexmail.jar', '0', 'false', 'false', 0, 'endedman', 'free', 'communicate'),
+(8, 'PvZ Java', 'PopCap Games', 1, '/no-photo.jpg', '/app/opera-mini/frontimage.jpg', '', '/app/plants-vs-zombies/plants-vs-zombies.jar', '0', 'false', 'false', 0, 'endedman', 'free', 'arcade'),
+(11, 'Example non-paid App', 'Endedman', 0, 'http://j2me.ml/no-photo.jpg', 'http://j2me.ml/no-photo.jpg', '', 'http://j2me.ml/app/Example App/Example App.jar', 'cfe496a34b36bcdd84785cba6a88e1ff', 'false', 'false', 0, 'endedman', 'free', 'other');
 
 -- --------------------------------------------------------
 
