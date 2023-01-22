@@ -1,3 +1,14 @@
+<?php
+$dbhost = 'localhost';
+$dbuser = 'endedman';
+$dbpass = '';
+$dbname = 'jstore2';
+$link = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$rows = "SELECT * FROM apps WHERE section='social'";
+$d = mysqli_query($link, $rows);
+$row = mysqli_fetch_array($d, MYSQLI_ASSOC);
+mysqli_free_result($d);
+?>
 <html>
 <head>
 	<title>Социальные сети - J2ME Play</title>
@@ -226,46 +237,37 @@
 										<div class="carousel-pages-wrapper" data-analyticsid="featured-apps">
 											<div class="carousel-page">
 												<div class="j2me-inline-block" style="display: flex;">
-													<div class="snippet snippet-tall">
-														<div class="thumbnail-wrapper j2me-inline-block">
-															<a href="http://j2me.ml/app/mpgram" class="thumbnail">
-																<img src="../app/mpgram/logo-mpgram.png" alt="mpgram">
-															</a>
-														</div>
-														<div class="details">
-															<a class="title" title="MPGram" href="http://j2me.ml/app/mpgram">MPGram</a>
-															<span class="attribution">
-																<a href="http://j2me.ml/dev/nnproject">nnproject</a>
-															</span>
-														</div>
-														<div class="buy-wrapper j2me-inline-block">
-															<div class="buy-border">
-																<a class="buy-link buy-button j2me-inline-block" href="app/mpgram">
-																	<span class="buy-button-price" id="ru.nnchan.mp">Установить</span>
-																</a>
+													<?
+													$rows = "SELECT * FROM apps where section='social'";
+													$d = mysqli_query($link, $rows);
+													while($row=mysqli_fetch_array($d))
+													{	
+														echo "
+														
+															<div class='snippet snippet-tall'>
+																<div class='thumbnail-wrapper j2me-inline-block'>
+																	<a href='http://j2me.ml/?id=$row[id]' class='thumbnail'>
+																		<img src=$row[icon] alt=$row[app_name]>
+																	</a>
+																</div>
+																<div class='details'>
+																	<a class='title' title='$row[app_name]' href='http://j2me.ml/?id=$row[id]'>$row[app_name]</a>
+																	<span class='attribution'>
+																		<a href='http://j2me.ml/?dev=$row[id]'>$row[dev_name]</a>
+																	</span>
+																</div>
+																<div class='buy-wrapper j2me-inline-block'>
+																	<div class='buy-border'>
+																		<a class='buy-link buy-button j2me-inline-block' href='/?id=$row[id]'>
+																			<span class='buy-button-price' id='mobi.opera.mobi'>Установить</span>
+																		</a>
+																</div>
+																</div>
 															</div>
-														</div>
-													</div>
-													<div class="snippet snippet-tall">
-														<div class="thumbnail-wrapper j2me-inline-block">
-															<a href="http://j2me.ml/app/vk4me" class="thumbnail">
-																<img src="../app/vk4me/logo-vk4me.png" alt="vk4me">
-															</a>
-														</div>
-														<div class="details">
-															<a class="title" title="vk4me" href="http://j2me.ml/app/vk4me">vk4me</a>
-															<span class="attribution">
-																<a href="http://j2me.ml/dev/libreshare-free-solutions">crx.moe</a>
-															</span>
-														</div>
-														<div class="buy-wrapper j2me-inline-block">
-															<div class="buy-border">
-																<a class="buy-link buy-button j2me-inline-block" href="app/vk4me">
-																	<span class="buy-button-price" id="me.vk4me">Установить</span>
-																</a>
-															</div>
-														</div>
-													</div>
+														
+														";
+													}
+												?>
 												</div>
 											</div>
 										</div>

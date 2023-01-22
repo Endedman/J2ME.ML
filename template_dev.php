@@ -1,8 +1,8 @@
 <?php
 $dbhost = 'localhost';
-$dbuser = 'admin_default';
+$dbuser = 'endedman';
 $dbpass = '';
-$dbname = 'admin_default';
+$dbname = 'jstore2';
 $link = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 $dev=$_GET['dev'];
 $rows = "SELECT * FROM devs WHERE id='$dev'";
@@ -21,7 +21,7 @@ mysqli_free_result($d);
 		<div class="header">
 			<ol class="headlist">
 				<li class="headlinks">
-					<a class="headlink" id="headlink_1" href="http://168.119.140.238:40693">
+					<a class="headlink" id="headlink_1" href="http://j2me.ml">
 						<span class="headlink_sup"></span>
 						<div class="head_nopad">
 							<span class="headlink_context">Main</span>
@@ -29,7 +29,7 @@ mysqli_free_result($d);
 					</a>
 				</li>
 				<li class="headlinks">
-					<a class="headlink" id="headlink_1" href="http://168.119.140.238:40693">
+					<a class="headlink" id="headlink_1" href="http://j2me.ml">
 						<span class="headlink_sup selected"></span>
 						<div class="head_nopad">
 							<span class="headlink_context">Store</span>
@@ -37,7 +37,7 @@ mysqli_free_result($d);
 					</a>
 				</li>
 				<li class="headlinks">
-					<a class="headlink" id="headlink_1" href="http://168.119.140.238:40693">
+					<a class="headlink" id="headlink_1" href="http://j2me.ml">
 						<span class="headlink_sup"></span>
 						<div class="head_nopad">
 							<span class="headlink_context">Telegram</span>
@@ -49,7 +49,7 @@ mysqli_free_result($d);
 		<div class="head_doact">
 			<ol class="headlist">
 				<li class="headlinks">
-					<a class="headlink" id="headlink_1" href="http://168.119.140.238:40693">
+					<a class="headlink" id="headlink_1" href="http://j2me.ml">
 						<span class="headlink_sup"></span>
 						<div class="head_nopad">
 							<span class="headlink_context bold">Account management</span>
@@ -57,7 +57,7 @@ mysqli_free_result($d);
 					</a>
 				</li>
 				<li class="headlinks">
-					<a class="headlink" id="headlink_1" href="http://168.119.140.238:40693">
+					<a class="headlink" id="headlink_1" href="http://j2me.ml">
 						<span class="headlink_sup"></span>
 						<div class="head_nopad head_nopad_icon">
 							<span class="head_icon"></span>
@@ -70,7 +70,7 @@ mysqli_free_result($d);
 	<div class="advert-container">
 		<div class="advert">
 			Представляем <b>J2ME Play</b> 
-			<a href="http://168.119.140.238:40693/">Больше</a>
+			<a href="http://j2me.ml/">Больше</a>
 			<div class="advert-bar-tip-container">
 				<div class="advert-bar-tip"></div>
 			</div>
@@ -78,7 +78,7 @@ mysqli_free_result($d);
 	</div>
 	<div class="j2me-container">
 		<div class="j2me">
-<!-- 			<a href="http://168.119.140.238:40693/" class="play-inline-block">
+<!-- 			<a href="http://j2me.ml/" class="play-inline-block">
 				<div class="play-logo play-inline-block"></div>
 			</a> -->
 			<div class="search">
@@ -96,18 +96,18 @@ mysqli_free_result($d);
 			<div class="menu-wrapper">
 				<ul class="menu-bar" id="menu-bar" role="menubar" style="user-select: none;" aria-activedescendant="">
 					<li class="menu-bar-button menu-bar-left highlight" id=":0" style="user-select: none;">
-						<a href="http://168.119.140.238:40693/" class="menu-bar-button-link first" style="user-select: none;">Каталог приложений<span href="/" class="down-arrow" style="user-select: none;"></span>
+						<a href="http://j2me.ml/" class="menu-bar-button-link first" style="user-select: none;">Каталог приложений<span href="/" class="down-arrow" style="user-select: none;"></span>
 						</a>
 						<ul class="menu-bar-child j2me-menu" role="menu" aria-haspopup="true" tabindex="-1" style="user-select: none; display: none;">
 							<li class="menu-bar-item" role="menuitem" id=":1" style="user-select: none;">
 								<div class="menu-bar-item-content" style="user-select: none;">
-									<a href="http://168.119.140.238:40693/app" style="user-select: none;">Каталог</a>
+									<a href="http://j2me.ml/app" style="user-select: none;">Каталог</a>
 								</div>
 							</li>
 						</ul>
 					</li>
 					<li class="menu-bar-button menu-bar-right" id=":2" style="user-select: none;">
-						<a href="http://168.119.140.238:40693/app/my" class="menu-bar-button-link" style="user-select: none;">Мои приложения</a>
+						<a href="http://j2me.ml/app/my" class="menu-bar-button-link" style="user-select: none;">Мои приложения</a>
 					</li>
 				</ul>
 			</div>
@@ -132,7 +132,7 @@ mysqli_free_result($d);
 											<tr>
 												<td class="doc-banner-title-container">
 													<h1 class="doc-banner-title"><? print ($row["dev_name"]); ?></h1>
-													<a href="http://168.119.140.238:40693?dev=<?php $row['dev_name'] ?>" class="doc-header-link"><? print ($row["dev_name"]); ?></a>
+													<a href="http://j2me.ml?dev=<?php $row['dev_name'] ?>" class="doc-header-link"><? print ($row["dev_name"]); ?></a>
 												</td>
 											</tr>
 										</tbody>
@@ -185,19 +185,19 @@ mysqli_free_result($d);
 		</div>
 	</div>
 	<div id="footer">
-		<a class="footer-link" href="http://168.119.140.238:40693/appaccount">Аккаунт-менеджемент</a>|
+		<a class="footer-link" href="http://j2me.ml/appaccount">Аккаунт-менеджемент</a>|
 		<a class="footer-link">
 			<select id="user-locale">
 				<option value="en">&#x202A;Русский&#x202C;</option>
 			</select>
 		</a>|
-		<a class="footer-link" href="http://168.119.140.238:40693/help-jstore">Помощь</a>|
+		<a class="footer-link" href="http://j2me.ml/help-jstore">Помощь</a>|
 		<br><br><img src="get-it-btn.png" width="230px"><br><br>
 	</div>
 	<div id="footer-tab-edge"></div>
 	<div id="sub-footer">©2022 LibreShare
-		<a class="sub-footer-link" href="http://168.119.140.238:40693/rules">Условия</a>
-	 	<a class="sub-footer-link" href="http://168.119.140.238:40693/policy">Политика конфиденциальность</a>
+		<a class="sub-footer-link" href="http://j2me.ml/rules">Условия</a>
+	 	<a class="sub-footer-link" href="http://j2me.ml/policy">Политика конфиденциальность</a>
 	 	<a class="sub-footer-link" href="#">Yet Another Instance of LibrePlay</a>
 	 </div>
 </body>

@@ -1,8 +1,8 @@
 <?php
 $dbhost = 'localhost';
-$dbuser = 'admin_default';
+$dbuser = 'endedman';
 $dbpass = '';
-$dbname = 'admin_default';
+$dbname = 'jstore2';
 $link = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 $rows = "SELECT * FROM apps";
 $d = mysqli_query($link, $rows);
@@ -16,8 +16,8 @@ $token=md5($date);
 $paid=$_GET['paid'];
 $fee=$_GET['fee'];
 $paytoken=$_GET['paytoken'];
-mysqli_query($link, "INSERT into apps (app_name, dev_name, icon, banner, file, token, paid, fee, paytoken) values ('$app_name', '$dev_name', '$icon', '$banner', 'http://168.119.140.238:40693/app/$app_name/$app_name.jar', '$token', '$paid', '$fee', '$paytoken')");
+mysqli_query($link, "INSERT into apps (app_name, dev_name, icon, banner, file, token, paid, fee, paytoken) values ('$app_name', '$dev_name', '$icon', '$banner', 'http://j2me.ml/app/$app_name/$app_name.jar', '$token', '$paid', '$fee', '$paytoken')");
 printf('Succeeded, SQL query accepted');
-mkdir('/var/www/html/app/'.$app_name.'/');
+mkdir('/var/www/endedman/data/www/j2me.ml/app/'.$app_name.'/');
 printf('Succeeded, mkdir executed!');
 ?>

@@ -1,8 +1,8 @@
 <?php
 $dbhost = 'localhost';
-$dbuser = 'admin_default';
+$dbuser = 'endedman';
 $dbpass = '';
-$dbname = 'admin_default';
+$dbname = 'jstore2';
 $link = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 $q = $_GET['q'];
 if(isset($q)){
@@ -15,6 +15,6 @@ $nomer = $row["id"];
 $name = $row["app_name"];
 echo "id: $nomer.<br>";
 echo "appname: $name. <br>";
-echo "link: <a href='http://168.119.140.238:40693?id=$nomer'>http://168.119.140.238:40693?id=$nomer</a><br>";
+echo "link: <a href='http://j2me.ml?id=$nomer'>http://j2me.ml?id=$nomer</a><br>";
 }
 ?>

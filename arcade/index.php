@@ -1,3 +1,14 @@
+<?php
+$dbhost = 'localhost';
+$dbuser = 'endedman';
+$dbpass = '';
+$dbname = 'jstore2';
+$link = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$rows = "SELECT * FROM apps WHERE section='arcade'";
+$d = mysqli_query($link, $rows);
+$row = mysqli_fetch_array($d, MYSQLI_ASSOC);
+mysqli_free_result($d);
+?>
 <html>
 <head>
 	<title>Аркады - J2ME Play</title>
@@ -226,26 +237,37 @@
 										<div class="carousel-pages-wrapper" data-analyticsid="featured-apps">
 											<div class="carousel-page">
 												<div class="j2me-inline-block" style="display: flex;">
-													<div class="snippet snippet-tall">
-														<div class="thumbnail-wrapper j2me-inline-block">
-															<a href="http://j2me.ml/app/catch-the-fruits" class="thumbnail">
-																<img src="../app/opera-mini/logo-catch-the-fruits.png" alt="catch the fruits">
-															</a>
-														</div>
-														<div class="details">
-															<a class="title" title="Catch The Fruits" href="../app/catch-the-fruits">Catch The Fruits</a>
-															<span class="attribution">
-																<a href="http://j2me.ml/dev/other">unknown</a>
-															</span>
-														</div>
-														<div class="buy-wrapper j2me-inline-block">
-															<div class="buy-border">
-																<a class="buy-link buy-button j2me-inline-block" href="app/catch-the-fruits">
-																	<span class="buy-button-price" id="mobi.fruits.catch">Установить</span>
-																</a>
+													<?
+													$rows = "SELECT * FROM apps where section='arcade'";
+													$d = mysqli_query($link, $rows);
+													while($row=mysqli_fetch_array($d))
+													{	
+														echo "
+														
+															<div class='snippet snippet-tall'>
+																<div class='thumbnail-wrapper j2me-inline-block'>
+																	<a href='http://j2me.ml/?id=$row[id]' class='thumbnail'>
+																		<img src=$row[icon] alt=$row[app_name]>
+																	</a>
+																</div>
+																<div class='details'>
+																	<a class='title' title='$row[app_name]' href='http://j2me.ml/?id=$row[id]'>$row[app_name]</a>
+																	<span class='attribution'>
+																		<a href='http://j2me.ml/?dev=$row[id]'>$row[dev_name]</a>
+																	</span>
+																</div>
+																<div class='buy-wrapper j2me-inline-block'>
+																	<div class='buy-border'>
+																		<a class='buy-link buy-button j2me-inline-block' href='/?id=$row[id]'>
+																			<span class='buy-button-price' id='mobi.opera.mobi'>Установить</span>
+																		</a>
+																</div>
+																</div>
 															</div>
-														</div>
-													</div>
+														
+														";
+													}
+												?>
 												</div>
 											</div>
 										</div>

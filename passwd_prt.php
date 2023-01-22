@@ -1,10 +1,4 @@
 <?php
-
-
-##################################################################
-# SETTINGS START
-##################################################################
-
 // Add login/password pairs below, like described above
 // NOTE: all rows except last must have comma "," at the end of line
 $LOGIN_INFORMATION = array(
@@ -15,7 +9,7 @@ $LOGIN_INFORMATION = array(
 define('USE_USERNAME', true);
 
 // User will be redirected to this page after logout
-define('LOGOUT_URL', 'http://domain.tld/');
+define('LOGOUT_URL', 'http://domain.tld');
 
 // time out after NN minutes of inactivity. Set to 0 to not timeout
 define('TIMEOUT_MINUTES', 0);
