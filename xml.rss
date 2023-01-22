@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <generator>RSS Builder by B!Soft</generator>
+    <title>J2ME.ML</title>
+    <link>http://j2me.ml</link>
+    <description>RSS Test</description>
+    <language>en-us</language>
+    <managingEditor>endedman@j2me.ml</managingEditor>
+    <webMaster>endedman@j2me.ml</webMaster>
+    <copyright>j2me.ml</copyright>
+    <image>
+      <title>J2ME.ML</title>
+      <link>http://j2me.ml</link>
+      <url>http://j2me.ml/images/logo.png</url>
+    </image>
+    <item>
+      <title>J2ME CMS</title>
+      <pubDate>Tue, 13 Sep 2022 13:13:17 +0300</pubDate>
+      <description><![CDATA[<strong>Especcially, we have just created a new CMS for you!</strong>]]></description>
+      <link>http://j2me.ml/cms</link>
+      <author>endedman@j2me.ml</author>
+      <category>CMS</category>
+    </item>
+  </channel>
+</rss>
