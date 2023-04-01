@@ -128,10 +128,6 @@ switch ($message) {
         $method = 'sendMessage';
 		$send_data = ['text' => "2022-08-12 - создание бота\n2022-08-15 - первая DDoS - атака на инфраструктуру J2ME PR LLC\n 2022-08-16-17 - Масштабная ДДОС-атака с трафиком 500Гбит/с\n 2022-08-18 - Установлен КФ\n2022-08-20 Все атаки прекратились"];
     break;
-	case 'кто пидор':
-        $method = 'sendMessage';
-		$send_data = ['text' => '@Prosto_proso2 пидор'];
-    break;
 	case 'наш сайт':
         $method = 'sendMessage';
 		$send_data = ['text' => 'http://j2me.ml'];
@@ -299,19 +295,10 @@ switch ($message) {
 		$weatherecho = file_get_contents('http://j2me.ml/bot/weathermodule.php');
 		$send_data = ['text' => "Погода - СПб \n". print_r($weatherecho, 1)."\n"];
     break;
-	case 'нахуй':
-        $method = 'sendMessage';
-		$send_data = ['text' => "Со всем авторитетом сообщаю: идите нахуй!"];
-    break;
 	case 'кто же нас дудосил':
         $method = 'sendMessage';
 		$send_data = ['text' => "Овердорд!\nФИО: Кондрашов Данила Валерьевич\nДень рождения: 10.02.2004\nТелефон: +79098346159\nEmail: kondrashovdanila1@gmail.com"];
     break;
-/* 	case 'хуй' or 'пизда' or 'член' or 'faggot' or 'пидо' or 'манда' or 'пидо':
-        $method = 'sendMessage';
-		$send_data = ['text' => "не матерись, материться можно только мне, 'Поддержка J2ME || J2ME Support'"];
-		$send_data = ['text' => "Бан {getuserID}"];
-    break; */
 }
 
 $send_data['chat_id'] = $data['chat'] ['id'];
