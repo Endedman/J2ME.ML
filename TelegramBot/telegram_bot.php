@@ -1,7 +1,7 @@
 <?php
 error_reporting(0);
 header('HTTP/1.0','404');
-echo('эй, бляди, пошли отсюда!');
+echo('эй, пошли отсюда!');
 $data = json_decode(file_get_contents('php://input'), TRUE);
 //пишем в файл лог сообщений
 file_put_contents('file.txt', '$data: '.print_r($data, 1)."\n", FILE_APPEND);
